@@ -1,0 +1,65 @@
+# ==============================================================================
+# 1. DDEV & DOCKER CONTEXT
+# ==============================================================================
+# Abaikan berkas lokal DDEV tetapi pertahankan konfigurasi utama proyek
+/.ddev/.env*
+/.ddev/db/
+/.ddev/homeadditions/
+/.ddev/config.local.yaml
+/.ddev/import-db/
+!/.ddev/config.yaml
+!/.ddev/commands/
+!/.ddev/providers/
+/.tarballs/
+
+# ==============================================================================
+# 2. DRUPAL CORE & CONTRIB (DIKELOLA OLEH COMPOSER)
+# ==============================================================================
+# Jangan pernah commit modul/tema unduhan dari luar
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# Pastikan folder custom tetap dilacak oleh Git
+!/web/modules/custom/
+!/web/themes/custom/
+!/web/profiles/custom/
+
+# ==============================================================================
+# 3. KONFIGURASI SENSITIF & LOKAL (KREDENSIAL DB)
+# ==============================================================================
+.env
+.env.local
+/web/sites/*/settings.local.php
+
+# Berkas setelan otomatis yang dibuat DDEV untuk Drupal 11
+/web/sites/*/settings.ddev.php
+
+# Secara default, abaikan settings.php jika Anda menyertakan kredensial di sana
+/web/sites/*/settings.php
+
+# Jika Anda ingin commit struktur settings.php bawaan, hapus tanda '#' di bawah ini:
+# !/web/sites/default/settings.php
+
+# ==============================================================================
+# 4. USER UPLOADS & FILE CACHE (JANGAN DI-COMMIT)
+# ==============================================================================
+/web/sites/*/files/
+/web/sites/*/private/
+/web/sites/*/translations/
+
+# ==============================================================================
+# 5. IDE & SYSTEM FILES
+# ==============================================================================
+# macOS & Windows
+.DS_Store
+Thumbs.db
+
+# Editor (VS Code / PHPStorm)
+/.idea/
+/.vscode/
+*.swp
+*.bak
