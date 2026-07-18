@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bfc920f17cbf14eba306613d3a7242e6",
+    "content-hash": "ec47d5cbc13981a1ba088b1f69faa050",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1209,68 +1209,151 @@
             "time": "2024-02-05T11:56:58+00:00"
         },
         {
-            "name": "dragonmantank/cron-expression",
-            "version": "v3.6.0",
+            "name": "drupal/address",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dragonmantank/cron-expression.git",
-                "reference": "d61a8a9604ec1f8c3d150d09db6ce98b32675013"
+                "url": "https://git.drupalcode.org/project/address.git",
+                "reference": "2.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/d61a8a9604ec1f8c3d150d09db6ce98b32675013",
-                "reference": "d61a8a9604ec1f8c3d150d09db6ce98b32675013",
-                "shasum": ""
+                "url": "https://ftp.drupal.org/files/projects/address-2.0.4.zip",
+                "reference": "2.0.4",
+                "shasum": "5a86f7abc028f3d9833784dbf0791a6e4463da8e"
             },
             "require": {
-                "php": "^8.2|^8.3|^8.4|^8.5"
-            },
-            "replace": {
-                "mtdowling/cron-expression": "^1.0"
+                "commerceguys/addressing": "^2.1.1",
+                "drupal/core": "^9.5 || ^10 || ^11",
+                "php": "^8.0"
             },
             "require-dev": {
-                "phpstan/extension-installer": "^1.4.3",
-                "phpstan/phpstan": "^1.12.32|^2.1.31",
-                "phpunit/phpunit": "^8.5.48|^9.0"
+                "drupal/diff": "^1",
+                "drupal/feeds": "^3",
+                "drupal/token": "^1"
             },
-            "type": "library",
+            "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
+                "drupal": {
+                    "version": "2.0.4",
+                    "datestamp": "1746462054",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
                 }
             },
-            "autoload": {
-                "psr-4": {
-                    "Cron\\": "src/Cron/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "MIT"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
-                    "name": "Chris Tankersley",
-                    "email": "chris@ctankersley.com",
-                    "homepage": "https://github.com/dragonmantank"
-                }
-            ],
-            "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
-            "keywords": [
-                "cron",
-                "schedule"
-            ],
-            "support": {
-                "issues": "https://github.com/dragonmantank/cron-expression/issues",
-                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.6.0"
-            },
-            "funding": [
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
                 {
-                    "url": "https://github.com/dragonmantank",
-                    "type": "github"
+                    "name": "centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
+                },
+                {
+                    "name": "dww",
+                    "homepage": "https://www.drupal.org/user/46549"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
                 }
             ],
-            "time": "2025-10-31T18:51:33+00:00"
+            "description": "Provides functionality for storing, validating and displaying international postal addresses.",
+            "homepage": "http://drupal.org/project/address",
+            "support": {
+                "source": "https://git.drupalcode.org/project/address"
+            }
+        },
+        {
+            "name": "drupal/commerce",
+            "version": "3.3.7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce.git",
+                "reference": "3.3.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce-3.3.7.zip",
+                "reference": "3.3.7",
+                "shasum": "3771a58c7702811d787066ad086533fdca715e70"
+            },
+            "require": {
+                "commerceguys/intl": "^2.0.6",
+                "drupal/address": "^2.0",
+                "drupal/core": "^10.3 || ^11",
+                "drupal/entity": "^1.0",
+                "drupal/entity_reference_revisions": "~1.0",
+                "drupal/inline_entity_form": "^1.0@RC || ^3.0@RC",
+                "drupal/profile": "^1.2",
+                "drupal/state_machine": "^1.5",
+                "drupal/token": "^1.7",
+                "ext-bcmath": "*",
+                "php": "^8.1"
+            },
+            "conflict": {
+                "drupal/commerce_shipping": "<2.1",
+                "drupal/physical": "<1.3"
+            },
+            "require-dev": {
+                "drupal/commerce_cart": "*",
+                "drupal/commerce_number_pattern": "*",
+                "drupal/commerce_order": "*",
+                "drupal/commerce_payment": "*",
+                "drupal/commerce_price": "*",
+                "drupal/commerce_store": "*",
+                "drupal/entity_print": "^2.2",
+                "drupal/entity_reference_revisions": "*",
+                "drupal/mailsystem": "^4.3",
+                "drupal/physical": "^1.3",
+                "drupal/profile": "*",
+                "drupal/state_machine": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.3.7",
+                    "datestamp": "1784209469",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                }
+            ],
+            "description": "Drupal Commerce is a flexible eCommerce solution.",
+            "homepage": "https://drupal.org/project/commerce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce"
+            }
         },
         {
             "name": "drupal/core",
@@ -1663,37 +1746,27 @@
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core."
         },
         {
-            "name": "drupal/eca",
-            "version": "3.1.4",
+            "name": "drupal/entity",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/eca.git",
-                "reference": "3.1.4"
+                "url": "https://git.drupalcode.org/project/entity.git",
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eca-3.1.4.zip",
-                "reference": "3.1.4",
-                "shasum": "a63ee9d4a7d943698a5640f14499d9f0986630eb"
+                "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "dfb214fd45bd6ad79604d23a39a96b3d4c38f8e1"
             },
             "require": {
-                "dragonmantank/cron-expression": "^3.1",
-                "drupal/core": "^11.3 || ^12.0",
-                "drupal/modeler_api": "^1.1",
-                "ext-json": "*",
-                "php": ">=8.3"
-            },
-            "require-dev": {
-                "drupal/eca_endpoint": "*",
-                "drupal/eca_misc": "*",
-                "drupal/eca_render": "*",
-                "drupal/modeler_api": "*"
+                "drupal/core": "^10.1 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.4",
-                    "datestamp": "1783530591",
+                    "version": "8.x-1.6",
+                    "datestamp": "1740006812",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1706,48 +1779,73 @@
             ],
             "authors": [
                 {
-                    "name": "boromino",
-                    "homepage": "https://www.drupal.org/user/859722"
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "danielspeicher",
-                    "homepage": "https://www.drupal.org/user/3621778"
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
                 },
                 {
-                    "name": "jurgenhaas",
-                    "homepage": "https://www.drupal.org/user/168924"
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "dixon_",
+                    "homepage": "https://www.drupal.org/user/239911"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "tr",
+                    "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
+                    "name": "tstoeckler",
+                    "homepage": "https://www.drupal.org/user/107158"
                 }
             ],
-            "description": "Event, Conditions, Actions - powerful, versatile, and user-friendly rules engine for Drupal",
-            "homepage": "https://www.drupal.org/project/eca",
+            "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
+            "homepage": "https://www.drupal.org/project/entity",
             "support": {
-                "source": "https://drupal.org/project/eca",
-                "issues": "https://drupal.org/project/issues/eca"
+                "source": "https://git.drupalcode.org/project/entity",
+                "issues": "https://www.drupal.org/project/issues/entity"
             }
         },
         {
-            "name": "drupal/modeler_api",
-            "version": "1.1.3",
+            "name": "drupal/entity_reference_revisions",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/modeler_api.git",
-                "reference": "1.1.3"
+                "url": "https://git.drupalcode.org/project/entity_reference_revisions.git",
+                "reference": "8.x-1.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/modeler_api-1.1.3.zip",
-                "reference": "1.1.3",
-                "shasum": "f66fb69dc94a9404cf963fb58398b5203f3b3387"
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "cb900e41124979a46da1912ff2b502270beda632"
             },
             "require": {
-                "drupal/core": "^11.3 || ^12.0",
-                "php": ">=8.3"
+                "drupal/core": "^10.2 || ^11"
+            },
+            "conflict": {
+                "drush/drush": "<12.5.1"
+            },
+            "require-dev": {
+                "drupal/diff": "^1 || ^2"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.1.3",
-                    "datestamp": "1780496337",
+                    "version": "8.x-1.14",
+                    "datestamp": "1767266825",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1760,56 +1858,358 @@
             ],
             "authors": [
                 {
-                    "name": "benjifisher",
-                    "homepage": "https://www.drupal.org/user/683300"
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "cosmicdreams",
-                    "homepage": "https://www.drupal.org/user/42579"
+                    "name": "frans",
+                    "homepage": "https://www.drupal.org/user/514222"
                 },
                 {
-                    "name": "jurgenhaas",
-                    "homepage": "https://www.drupal.org/user/168924"
+                    "name": "jeroen.b",
+                    "homepage": "https://www.drupal.org/user/1853532"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
                 }
             ],
-            "description": "Provides an API for modules to use modelers like BPMN.iO",
-            "homepage": "https://www.drupal.org/project/modeler_api",
+            "description": "Entity Reference Revisions",
+            "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
-                "source": "https://drupal.org/project/modeler_api",
-                "issues": "https://drupal.org/project/issues/modeler_api"
+                "source": "https://git.drupalcode.org/project/entity_reference_revisions"
             }
         },
         {
-            "name": "drupal/smart_date",
-            "version": "4.3.0",
+            "name": "drupal/inline_entity_form",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "4.3.0"
+                "url": "https://git.drupalcode.org/project/inline_entity_form.git",
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-4.3.0.zip",
-                "reference": "4.3.0",
-                "shasum": "820497eb5aa608aadf3b82a630490b5ed6182a31"
+                "url": "https://ftp.drupal.org/files/projects/inline_entity_form-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "43417cf232df36d6a621151dffa569b77dfd9725"
             },
             "require": {
-                "drupal/core": "^10 || ^11 || ^12",
-                "php": ">=8.1",
-                "simshaun/recurr": "^5"
+                "drupal/core": "^8.8 || ^9 || ^10 || ^11",
+                "drupal/rat": "^1.0.0@stable",
+                "php": ">=7.1"
             },
             "require-dev": {
-                "drupal/token": "*",
-                "drush/drush": "*"
-            },
-            "suggest": {
-                "drupal/multiple_fields_remove_button": "Provides a button for editors to remove unwanted rows."
+                "drupal/entity_reference_revisions": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.3.0",
-                    "datestamp": "1783894694",
+                    "version": "3.0.0",
+                    "datestamp": "1780695753",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "centarro",
+                    "homepage": "https://www.drupal.org/user/3661446"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "dww",
+                    "homepage": "https://www.drupal.org/user/46549"
+                },
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "oknate",
+                    "homepage": "https://www.drupal.org/user/471638"
+                },
+                {
+                    "name": "ram4nd",
+                    "homepage": "https://www.drupal.org/user/601534"
+                },
+                {
+                    "name": "rszrama",
+                    "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "Provides a widget for inline management (creation, modification, removal) of referenced entities.",
+            "homepage": "https://www.drupal.org/project/inline_entity_form",
+            "support": {
+                "source": "https://git.drupalcode.org/project/inline_entity_form"
+            }
+        },
+        {
+            "name": "drupal/profile",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/profile.git",
+                "reference": "8.x-1.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/profile-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "eda73cb55a9034b318fb87bc9f8db4b778c4fdd6"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/entity": "^1.0",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "drupal/search_api": "~1.30",
+                "drupal/token": "^1.7"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.14",
+                    "datestamp": "1765287779",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "daggerhart",
+                    "homepage": "https://www.drupal.org/user/167806"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "pcambra",
+                    "homepage": "https://www.drupal.org/user/122101"
+                }
+            ],
+            "description": "Provides configurable user profiles.",
+            "homepage": "https://drupal.org/project/profile",
+            "support": {
+                "source": "https://git.drupalcode.org/project/profile"
+            }
+        },
+        {
+            "name": "drupal/rat",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rat.git",
+                "reference": "f13fcfb83445e505ffa84d2137231d91cd8c8146"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://git.drupalcode.org/api/v4/projects/project%2Frat/repository/archive.zip?sha=f13fcfb83445e505ffa84d2137231d91cd8c8146",
+                "reference": "f13fcfb83445e505ffa84d2137231d91cd8c8146",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "drupal/core": "^9.4",
+                "drupal/core-dev": "^9.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\rat\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "gpl-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Merlin",
+                    "email": "merlin@geeks4change.net"
+                }
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/rat/-/tree/1.0.1"
+            },
+            "time": "2025-12-29T15:30:47+00:00"
+        },
+        {
+            "name": "drupal/state_machine",
+            "version": "1.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/state_machine.git",
+                "reference": "8.x-1.14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/state_machine-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "7fdf6f65be647e2e4a44b56f724aab57e7a675ed"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10.1 || ^11",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "drupal/diff": "^1 || ^2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.14",
+                    "datestamp": "1770883116",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "arithmetric",
+                    "homepage": "https://www.drupal.org/user/162305"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "Brandonian",
+                    "homepage": "https://www.drupal.org/user/77766"
+                },
+                {
+                    "name": "das-peter",
+                    "homepage": "https://www.drupal.org/user/762870"
+                },
+                {
+                    "name": "e2thex",
+                    "homepage": "https://www.drupal.org/user/189123"
+                },
+                {
+                    "name": "elijah lynn",
+                    "homepage": "https://www.drupal.org/user/353190"
+                },
+                {
+                    "name": "ericduran",
+                    "homepage": "https://www.drupal.org/user/244460"
+                },
+                {
+                    "name": "fmitchell",
+                    "homepage": "https://www.drupal.org/user/213574"
+                },
+                {
+                    "name": "indytechcook",
+                    "homepage": "https://www.drupal.org/user/245817"
+                },
+                {
+                    "name": "jsacksick",
+                    "homepage": "https://www.drupal.org/user/972218"
+                },
+                {
+                    "name": "robeano",
+                    "homepage": "https://www.drupal.org/user/67660"
+                },
+                {
+                    "name": "stevector",
+                    "homepage": "https://www.drupal.org/user/179805"
+                },
+                {
+                    "name": "timcosgrove",
+                    "homepage": "https://www.drupal.org/user/118452"
+                },
+                {
+                    "name": "zroger",
+                    "homepage": "https://www.drupal.org/user/67977"
+                }
+            ],
+            "description": "Provides code-driven workflow functionality.",
+            "homepage": "http://drupal.org/project/state_machine",
+            "support": {
+                "source": "https://git.drupalcode.org/project/state_machine"
+            }
+        },
+        {
+            "name": "drupal/token",
+            "version": "1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/token.git",
+                "reference": "8.x-1.17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.17.zip",
+                "reference": "8.x-1.17",
+                "shasum": "21d11adf0be16f1aa95b6348b4ceadbe9a625824"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "require-dev": {
+                "drupal/book": "^1 || ^2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.17",
+                    "datestamp": "1767942434",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1817,7 +2217,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9"
+                        "drush.services.yml": ">=9"
                     }
                 }
             },
@@ -1827,27 +2227,34 @@
             ],
             "authors": [
                 {
-                    "name": "mandclu",
-                    "homepage": "https://www.drupal.org/user/52136"
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "stefan.korn",
-                    "homepage": "https://www.drupal.org/user/1942204"
+                    "name": "dave reid",
+                    "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
-                    "name": "tyapchyc",
-                    "homepage": "https://www.drupal.org/user/3351412"
+                    "name": "eaton",
+                    "homepage": "https://www.drupal.org/user/16496"
+                },
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "greggles",
+                    "homepage": "https://www.drupal.org/user/36762"
+                },
+                {
+                    "name": "mikeryan",
+                    "homepage": "https://www.drupal.org/user/4420"
                 }
             ],
-            "description": "Adds app-like date and recurring date functionality.",
-            "homepage": "https://www.drupal.org/project/smart_date",
-            "keywords": [
-                "Drupal"
-            ],
+            "description": "Provides a user interface for the Token API, some missing core tokens.",
+            "homepage": "https://www.drupal.org/project/token",
             "support": {
-                "source": "https://git.drupalcode.org/project/smart_date",
-                "issues": "https://www.drupal.org/project/issues/smart_date",
-                "documentation": "https://www.drupal.org/docs/contributed-modules/smart-date"
+                "source": "https://git.drupalcode.org/project/token"
             }
         },
         {
@@ -4000,65 +4407,6 @@
                 }
             ],
             "time": "2025-02-07T04:55:46+00:00"
-        },
-        {
-            "name": "simshaun/recurr",
-            "version": "v5.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/simshaun/recurr.git",
-                "reference": "7b136768d64f257065e38a804ee6d2f9af6ba6d1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/simshaun/recurr/zipball/7b136768d64f257065e38a804ee6d2f9af6ba6d1",
-                "reference": "7b136768d64f257065e38a804ee6d2f9af6ba6d1",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/collections": "~1.6||^2.0",
-                "php": "^7.2||^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5.16",
-                "symfony/yaml": "^5.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Recurr\\": "src/Recurr/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Shaun Simmons",
-                    "email": "shaun@shaun.pub",
-                    "homepage": "https://shaun.pub"
-                }
-            ],
-            "description": "PHP library for working with recurrence rules",
-            "homepage": "https://github.com/simshaun/recurr",
-            "keywords": [
-                "dates",
-                "events",
-                "recurrence",
-                "recurring",
-                "rrule"
-            ],
-            "support": {
-                "issues": "https://github.com/simshaun/recurr/issues",
-                "source": "https://github.com/simshaun/recurr/tree/v5.0.3"
-            },
-            "time": "2024-12-12T15:39:24+00:00"
         },
         {
             "name": "symfony/console",
