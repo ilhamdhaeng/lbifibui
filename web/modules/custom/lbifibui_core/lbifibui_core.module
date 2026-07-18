@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for LBIFIBUI Core module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() untuk form pendaftaran user.
+ */
+function lbifibui_core_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  
+  // 1. SELECTOR PASTI DARI HTML BROWSER
+  $selector = ':input[name="biodata_profiles[0][entity][field_kewarganegaraan]"]';
+
+  // Pastikan nilai 'wna' dan 'wni' sama persis dengan Key yang Anda buat di setting field.
+  // Jika Key-nya huruf kecil, ubah menjadi 'wna' dan 'wni'.
+  $kondisi_wna = ['visible' => [$selector => ['value' => 'wna']]];
+  $kondisi_wni = ['visible' => [$selector => ['value' => 'wni']]];
+
+  // 2. NAVIGASI KE DALAM STRUKTUR ARRAY FORM
+  if (isset($form['biodata_profiles'])) {
+    $p_form = &$form['biodata_profiles'];
+    
+    // Drupal kadang menambahkan layer 'widget' pada Form API
+    if (isset($p_form['widget'][0]['entity'])) {
+      $p_form = &$p_form['widget'][0]['entity'];
+    } elseif (isset($p_form[0]['entity'])) {
+      $p_form = &$p_form[0]['entity'];
+    }
+
+    // 3. TERAPKAN #STATES
+    if (isset($p_form['field_id_card'])) {
+      $p_form['field_id_card']['#states'] = $kondisi_wni;
+    }
+    
+    if (isset($p_form['field_kitas'])) {
+      $p_form['field_kitas']['#states'] = $kondisi_wna;
+    }
+    
+    if (isset($p_form['field_passport'])) {
+      $p_form['field_passport']['#states'] = $kondisi_wna;
+    }
+  }
+
+  $form['#entity_builders'][] = 'lbifibui_core_user_registration_entity_builder';
+}
+
+/**
+ * Custom Entity Builder.
+ */
+function lbifibui_core_user_registration_entity_builder($entity_type, UserInterface $user, &$form, FormStateInterface $form_state) {
+  // Ambil nilai khusus dari wrapper biodata_profiles
+  $values = $form_state->getValue('biodata_profiles');
+  
+  $kewarganegaraan = NULL;
+  
+  // Deteksi letak nilai kewarganegaraan saat disubmit
+  if (isset($values[0]['entity']['field_kewarganegaraan'][0]['value'])) {
+    $kewarganegaraan = $values[0]['entity']['field_kewarganegaraan'][0]['value'];
+  } elseif (isset($values[0]['field_kewarganegaraan'][0]['value'])) {
+     // Struktur alternatif jika disubmit tanpa wrapper entity
+     $kewarganegaraan = $values[0]['field_kewarganegaraan'][0]['value'];
+  }
+  
+  if ($kewarganegaraan === 'wni') {
+    $user->activate(); // Langsung aktif
+  }
+  elseif ($kewarganegaraan === 'wna') {
+    $user->block(); // Pending approval admin
+  }
+}
