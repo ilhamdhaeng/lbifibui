@@ -1,0 +1,8 @@
+name: 'LBIFIBUI Core'
+type: module
+description: 'Modul utama untuk mengelola logika bisnis LBIFIBUI, termasuk modifikasi form registrasi user dan workflow persetujuan.'
+package: 'LBIFIBUI Custom'
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:user
+  - drupal:file

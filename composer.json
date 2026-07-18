@@ -21,6 +21,8 @@
         "drupal/core-project-message": "^11.4",
         "drupal/core-recipe-unpack": "^11.4",
         "drupal/core-recommended": "^11.4",
+        "drupal/eca": "^3.1",
+        "drupal/smart_date": "^4.3",
         "drush/drush": "^13.7"
     },
     "conflict": {
@@ -47,6 +49,11 @@
             "locations": {
                 "web-root": "web/"
             }
+        },
+        "patches": {
+            "drupal/entity": {
+                "Fix Deprecation notice from DeleteAction class causes errors in ECA module": "https://drupal.org"
+                }
         },
         "installer-paths": {
             "web/core": [
