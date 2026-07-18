@@ -30,6 +30,7 @@ class ComposerStaticInit9da5b648ef8f9502ce0e25c3d2e5ae9d
         '2c2415ec15363ede1bff13a287462ba1' => __DIR__ . '/..' . '/symfony/polyfill-php86/bootstrap.php',
         '1052008401d4a2a5be02f7b4e274d051' => __DIR__ . '/..' . '/twig/html-extra/Resources/functions.php',
         '2f69d3914119f042cca9e44442d5ce95' => __DIR__ . '/../..' . '/web/core/includes/bootstrap.inc',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '47e1160838b5e5a10346ac4084b58c23' => __DIR__ . '/..' . '/laravel/prompts/src/helpers.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
     );
@@ -132,6 +133,7 @@ class ComposerStaticInit9da5b648ef8f9502ce0e25c3d2e5ae9d
         'D' =>
         array (
             'Drush\\' => 6,
+            'Drupal\\rat\\' => 11,
             'Drupal\\Core\\' => 12,
             'Drupal\\Composer\\Plugin\\Scaffold\\' => 32,
             'Drupal\\Composer\\Plugin\\RecipeUnpack\\' => 36,
@@ -155,6 +157,8 @@ class ComposerStaticInit9da5b648ef8f9502ce0e25c3d2e5ae9d
             'Consolidation\\AnnotatedCommand\\' => 31,
             'Composer\\Semver\\' => 16,
             'Composer\\Installers\\' => 20,
+            'CommerceGuys\\Intl\\' => 18,
+            'CommerceGuys\\Addressing\\' => 24,
         ),
         'A' =>
         array (
@@ -424,6 +428,10 @@ class ComposerStaticInit9da5b648ef8f9502ce0e25c3d2e5ae9d
         array (
             0 => __DIR__ . '/..' . '/drush/drush/src',
         ),
+        'Drupal\\rat\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/drupal/rat/src',
+        ),
         'Drupal\\Core\\' =>
         array (
             0 => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core',
@@ -503,6 +511,14 @@ class ComposerStaticInit9da5b648ef8f9502ce0e25c3d2e5ae9d
         'Composer\\Installers\\' =>
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
+        ),
+        'CommerceGuys\\Intl\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/commerceguys/intl/src',
+        ),
+        'CommerceGuys\\Addressing\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/commerceguys/addressing/src',
         ),
         'Asm89\\Stack\\' =>
         array (
